@@ -1,17 +1,21 @@
-import PWABadge from './PWABadge.tsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PWABadge from "./PWABadge.tsx";
+import GrandLayout from "./layout/GrandLayout.tsx";
+import Loading from "./screens/Loading.tsx";
 
 function App() {
-
   return (
     <>
-    <h1>PrepMaster</h1>
-
-
-
-    
+      <BrowserRouter>
+        <Routes>
+          <Route element={<GrandLayout />}>
+            <Route index element={<Loading />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <PWABadge />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
