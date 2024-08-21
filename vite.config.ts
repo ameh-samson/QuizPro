@@ -20,7 +20,24 @@ export default defineConfig({
         name: "QuizPro",
         short_name: "QuizPro",
         description: "An app that helps you prepare for certifications",
-        theme_color: "#fdb94b",
+        theme_color: "#B04CEC",
+        background_color: "#460a75",
+        display: "standalone",
+        icons: [
+          {
+            purpose: "maskable",
+            sizes: "512x512",
+            src: "icon512_maskable.png",
+            type: "image/png",
+          },
+
+          {
+            purpose: "any",
+            sizes: "512x512",
+            src: "icon512_rounded.png",
+            type: "image/png",
+          },
+        ],
       },
 
       workbox: {
