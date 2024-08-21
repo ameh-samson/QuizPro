@@ -1,34 +1,13 @@
+import { useProgressBar } from "@/hooks/useProgressBar";
 import quizProLogo from "../assets/svg/Logo.svg";
-import { useEffect, useState } from "react";
 
 const Loading = () => {
-  const [progress, setProgress] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    if (isLoading) {
-      const interval = setInterval(() => {
-        setProgress((prev) => {
-          return prev >= 100 ? 100 : prev + 10;
-        });
-      }, 500);
-
-      return () => clearInterval(interval);
-    }
-  }, [isLoading]);
-
-  //stop loading after reaching 100%
-  useEffect(() => {
-    if (progress >= 100) {
-      setIsLoading(false);
-    }
-  }, [progress]);
+  const { progress } = useProgressBar();
 
   return (
     <div className="h-screen gradientBg flex flex-col justify-between">
       <div className="flex flex-grow items-center justify-center">
         <img src={quizProLogo} className="w-40" />
-        <h1>Helloffff</h1>
       </div>
 
       <div className="bg-[#59307B] h-2">
