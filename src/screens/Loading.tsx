@@ -27,11 +27,11 @@ const Loading = () => {
   return (
     <div className="h-screen gradientBg flex flex-col justify-between">
       <div className="flex flex-grow items-center justify-center">
-        <img src={quizProLogo} className="w-32" />
+        <img src={quizProLogo} className="w-40" />
+        <h1>Helloffff</h1>
       </div>
 
       <div className="bg-[#59307B] h-2">
-        {/* <div className="loadingGradient rounded-r h-2 w-1/2"></div> */}
         <div
           className="loadingGradient rounded-r h-2 transition-all duration-500"
           style={{ width: `${progress}%` }}
