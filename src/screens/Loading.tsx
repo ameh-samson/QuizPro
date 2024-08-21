@@ -1,16 +1,12 @@
 import { useProgressBar } from "@/hooks/useProgressBar";
 import quizProLogo from "../assets/svg/Logo.svg";
-import VideoBackground from "@/components/VideoBg";
 
 const Loading = () => {
   const { progress } = useProgressBar();
 
   return (
-    <div className="h-screen relative flex flex-col justify-between">
-      {/* Video Background */}
-      <VideoBackground />
-      {/* Overlay */}
-      <div className=" relative z-10 flex flex-grow items-center justify-center">
+    <div className="h-screen gradientBg flex flex-col justify-between">
+      <div className="flex flex-grow items-center justify-center">
         <img src={quizProLogo} className="w-40" />
       </div>
 
